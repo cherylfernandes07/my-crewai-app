@@ -1,0 +1,29 @@
+# Environment variables (contains API keys!)
+.env*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+
+# CrewAI outputs
+*.log
