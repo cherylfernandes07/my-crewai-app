@@ -16,27 +16,42 @@ We'll build specialized AI agents using the CrewAI framework: a job analyzer tha
 ## Features
 Finally, we'll develop a Streamlit web application where you can input job preferences, browse fetched listings, select target positions, and generate customized resumes, cover letters, and LinkedIn messages with one click. We'll implement persistent logging to track applications and save generated materials. By the end, you'll have a portfolio-ready agentic system demonstrating CrewAI multi-agent orchestration, API integration, LLM-powered automation, and practical AI agent collaboration that proves your AI skills to recruiters.
 
+## Project Structure
+
+- `streamlit_app.py`: The frontend UI built with Streamlit.
+- `orchestrator.py`: The core logic that manages the CrewAI workflow and agent handoffs.
+- `usajobs_api.py`: Handles interaction with the USAJobs Search API.
+- `job_hunt_assistant/agents/`: Definitions for the JD Analyst, Resume Writer, and Messaging agents.
+- `job_hunt_assistant/utils/`: Utility functions for tracking, logging, and configuration.
+- `job_hunt_assistant/data/`: Storage for generated cover letters, application logs, and default templates.
+
 ## Getting Started
 
 Follow these steps to set up and run the application locally:
 
-1. **Create and activate a virtual environment:**
+1. **Configuration:**
+   Create a configuration file or environment variables for the following keys:
+   - `GEMINI_API_KEY`: Primary key for Google Gemini 2.0 Flash.
+   - `GEMINI_API_KEY_2`: Fallback key for rate limiting/retries.
+   - `USAJOBS_API_KEY`: Required to fetch live job data from USAJobs.gov.
+
+2. **Create and activate a virtual environment:**
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
-2. **Install the required dependencies:**
+3. **Install the required dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Run the Streamlit application:**
+4. **Run the Streamlit application:**
    ```bash
-   streamlit run app.py
+   streamlit run streamlit_app.py
    ```
 
-4. **Managing the environment:**
+5. **Managing the environment:**
    When you're done working, deactivate with:
    ```bash
    deactivate

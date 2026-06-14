@@ -3,3 +3,5 @@ crewai[google-genai]
 crewai-tools
 python-dotenv
 requests
+langchain_google_genai
+file

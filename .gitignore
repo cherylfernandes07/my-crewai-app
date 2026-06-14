@@ -27,3 +27,14 @@ build/
 
 # CrewAI outputs
 *.log
+
+# Generated reports and artifacts
+job_hunt_assistant/data/resume_agent_output*.txt
+job_hunt_assistant/data/report.md
+job_hunt_assistant/data/applications_log.csv
+job_hunt_assistant/data/cover_letters/
+
+# Legacy/root output paths used by some tasks
+data/report.md
+data/applications_log.csv
+data/cover_letters/
